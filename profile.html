@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Management System</title>
+    <link rel="stylesheet" href="C:\Users\candy\OneDrive\Desktop\ResumeDivya\Style.css">
+</head>
+<body>
+    <div class="container">
+  <p class = "Box" onclick="showText('personal')">Personal</p>
+  <p class = "Box" onclick="showText('education')">Education</p>
+  <p class = "Box" onclick="showText('location')">Location</p>
+
+</div>
+
+
+<div id="summary">
+    <h1>Doctor Information Management System</h1>
+
+<p>
+This project is designed to collect and manage doctor details efficiently.
+It helps store personal information, education details, hospital network information, and location details in an organized manner.
+The system provides an easy and user-friendly interface for managing healthcare professional records.
+</p>
+
+</div>
+
+<div id="content">
+
+</div>
+
+<script>
+
+function showText(type){
+
+    if(type=="personal"){
+
+    document.getElementById("summary").style.display = "none";
+    document.body.style.animation = "none";
+    document.body.style.background = "#e3f2fd";
+    document.getElementById("content").innerHTML = `
+
+    <h1>Personal Details</h1>
+
+     <div class="fileform">
+        
+  <h3>Personal Details</h3>
+  First Name: <input type="text">
+  Middle Name: <input type="text">
+  Last Name: <input type="text"><br><br>
+  DOB: <input type="date">
+
+  <label style="margin-left: 30px;">Gender:</label>
+  <input type="radio" name="gender" value="Male">Male
+  <input type="radio" name="gender" value="Female">Female
+  <input type="radio" name="gender" value="Other">Other <br><br>
+
+  Professional Language: <input type="text">
+  Additional language know :<input type="text"><br><br>
+
+  
+  Email: <input type="email"><br><br>
+  <button>Submit</button>
+</div><br><br>
+
+     <center><h2>Document Infirmation</h2></center>
+<hr>
+ <label>Below informations needed <span style="color:red">*</span></label>
+
+<div class="container1">
+
+<div class="form1">
+    Aadhar Number <br><input type="number" placeholder="Enter Aadhar Number"><br><br>
+    Start date: <input type="date"><br><br><br><br>
+    <button>save</button>
+</div>
+
+    <div class="form1">
+
+        <label>PAN number</label> <br> <input type="text" placeholder="Enter PAN ID"><br><br>
+        <label>Start date:</label> <input type="date"><br><br><br><br>
+        <button>save</button>
+    </div>
+
+    
+<div class="form1">
+    <label>Passport Number</label> <br> <input type="text" placeholder="Enter Passport number"><br><br>
+        <label>Start date:</label> <input type="date"><br><br><br><br>
+        <button>save</button>
+</div>
+
+
+<div class="form1">text and
+    <label>Voter ID</label> <br> <input type="text" placeholder="Enter Voter ID"><br><br>
+        <label>Start date:</label> <input type="date"><br><br><br><br>
+        <button>save</button>
+</div>
+
+
+<div class="form1">
+    <label>Driving License</label> <br> <input type="text" placeholder="Enter License number"><br><br>
+        <label>Start date:</label> <input type="date"><br><br><br><br>
+        <button>save</button>
+</div>
+    </div>
+    <hr>
+
+    `;
+
+}
+
+
+    else if(type=="education"){
+        document.getElementById("summary").style.display = "none";
+    document.body.style.animation = "none";
+    document.body.style.background = "#e3f2fd";
+        document.getElementById("content").innerHTML = `
+         <div class="Education">
+
+<div class="Medical">
+
+<h2>School</h2><br>
+School Name : <input type="text"><br><br>
+City, State : <input type="text"> <br><br>
+Degree : <input type="text"><br><br>
+Specialization : <input type="text"><br><br>
+Start date : <input type="date"><br><br>
+End date : <input type="date"><br><br>
+Effective date : <input type="date"><br><br>
+<button>save</button>
+</div>
+
+<div class="Medical">
+<h2>Medical</h2> <br>
+Organization Name : <input type="text"><br><br>
+City, State : <input type="text"> <br><br>
+Degree : <input type="text"><br><br>
+Specialization : <input type="text"><br><br>
+Start date : <input type="date"><br><br>
+End date : <input type="date"><br><br>
+Effective date : <input type="date"><br><br>
+<button>save</button>
+</div>
+
+
+<div class="Medical">
+<h2>Internship</h2><br>
+Organization Name : <input type="text"><br><br>
+City, State : <input type="text"> <br><br>
+Degree : <input type="text"><br><br>
+Specialization : <input type="text"><br><br>
+Start date : <input type="date"><br><br>
+End date : <input type="date"><br><br>
+Effective date : <input type="date"><br><br>
+<button>save</button>
+</div>
+
+<div class="Medical">
+<h2>Hospital Training</h2><br>
+Organization Name : <input type="text"><br><br>
+City, State : <input type="text"> <br><br>
+Degree : <input type="text"><br><br>
+Specialization : <input type="text"><br><br>
+Start date : <input type="date"><br><br>
+End date : <input type="date"><br><br>
+Effective date : <input type="date"><br><br>
+<button>save</button>
+</div> <br> <br>
+
+</div>
+ `;
+    }
+
+
+}
+
+</script>
+
+    </body>
+</html>
