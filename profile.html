@@ -56,9 +56,30 @@ function showText(type){
   <input type="radio" name="gender" value="Female">Female
   <input type="radio" name="gender" value="Other">Other <br><br>
 
-  Professional Language: <input type="text">
-  Additional language know :<input type="text"><br><br>
 
+  <label for="additional_language">Professional Language:</label>
+<select id="additional_language" name="additional_language">
+  <option value="hindi">Hindi</option>
+  <option value="english">English</option>
+  <option value="bengali">Bengali</option>
+  <option value="marathi">Marathi</option>
+  <option value="telugu">Telugu</option>
+  <option value="tamil">Tamil</option>
+  <option value="gujarati">Gujarati</option>
+  <option value="other">Other</option>
+</select>
+
+<label for="additional_language">Additional language known:</label>
+<select id="additional_language" name="additional_language">
+  <option value="hindi">Hindi</option>
+  <option value="english">English</option>
+  <option value="bengali">Bengali</option>
+  <option value="marathi">Marathi</option>
+  <option value="telugu">Telugu</option>
+  <option value="tamil">Tamil</option>
+  <option value="gujarati">Gujarati</option>
+  <option value="other">Other</option>
+</select>
   
   Email: <input type="email"><br><br>
   <button>Submit</button>
@@ -91,7 +112,7 @@ function showText(type){
 </div>
 
 
-<div class="form1">text and
+<div class="form1">
     <label>Voter ID</label> <br> <input type="text" placeholder="Enter Voter ID"><br><br>
         <label>Start date:</label> <input type="date"><br><br><br><br>
         <button>save</button>
@@ -103,8 +124,42 @@ function showText(type){
         <label>Start date:</label> <input type="date"><br><br><br><br>
         <button>save</button>
 </div>
-    </div>
+    </div><br>
+
+
+    <h2> Speciality/ License</h2>
     <hr>
+
+    <div class="form1">
+
+        <label> License Number</label> <br> <input type="text" placeholder="Enter License number"><br><br>
+        <label>Original date:</label> <input type="date"><br>
+        <label>Expired date:</label> <input type="date"><br><br><br><br>
+        <button>save</button>
+    
+        </div>
+        <div class="form1">
+    <label for="doctor-speciality">Speciality</label><br>
+    <select id="doctor-speciality" name="speciality">
+        <option value="" disabled selected>speciality Choose</option>
+        <option value="cardiology">Cardiology</option>
+        <option value="dermatology">Dermatology</option>
+        <option value="neurology">Neurology</option>
+        <option value="pediatrics">Pediatrics</option>
+        <option value="orthopedics">Orthopedics</option>
+        <option value="general-medicine">General Medicine</option>
+    </select> <br> <br>
+
+    <label for="start-date">Start date:</label>
+    <input type="date" id="start-date" name="start-date"><br><br><br>
+    
+    <button type="submit">save</button>
+
+</div>
+
+    <button class="add-btn">+ Add New</button>
+
+</div>
 
     `;
 
@@ -172,10 +227,63 @@ Effective date : <input type="date"><br><br>
  `;
     }
 
+    else if(type=="location"){
+        document.getElementById("summary").style.display = "none";
+    document.body.style.animation = "none";
+    document.body.style.background = "#e3f2fd";
+        document.getElementById("content").innerHTML = `<div class="location">
 
+
+    <div class="hospital-container">
+    <label for="hospital-name">Hospital Name:</label>
+    <select id="hospital-name" name="hospital_name">
+        <option value="" disabled selected>Select a Hospital</option>
+        <optgroup label="Top Ranked (National)">
+            <option value="aiims-delhi">AIIMS - New Delhi</option>
+            <option value="medanta-medicity">Medanta – The Medicity, Gurugram</option>
+            <option value="pgimer-chandigarh">PGIMER - Chandigarh</option>
+            <option value="cmc-vellore">CMC - Vellore</option>
+        </optgroup>
+        <optgroup label="Major Hospital Groups">
+            <option value="apollo-hospitals">Apollo Hospitals</option>
+            <option value="fortis-healthcare">Fortis Healthcare</option>
+            <option value="max-healthcare">Max Super Speciality Hospital</option>
+            <option value="manipal-hospitals">Manipal Hospitals</option>
+            <option value="narayana-health">Narayana Health</option>
+            <option value="aster-dm">Aster DM Healthcare</option>
+        </optgroup>
+        <optgroup label="Other Famous Institutions">
+            <option value="kokilaben-mumbai">Kokilaben Dhirubhai Ambani Hospital, Mumbai</option>
+            <option value="tata-memorial">Tata Memorial Hospital, Mumbai</option>
+            <option value="lilavati-mumbai">Lilavati Hospital, Mumbai</option>
+            <option value="yashoda-hyderabad">Yashoda Hospitals, Hyderabad</option>
+            <option value="sankara-nethralaya">Sankara Nethralaya, Chennai</option>
+        </optgroup>
+        <option value="other">Other (Not Listed)</option>
+    </select><br>
+    <p>
+        Department: <input type="text"><br><br>
+        Designation: <input type="text"><br><br>
+        From date: <input type="date"><br><br>
+        To date: <input type="date"><br><br>
+        Total Experience: <input type="text"><br><br>
+        Registration Number: <input type="text"><br><br>
+        Uploading Experience Certificate: <input type="file" id="experience" name="experience"><br><br>
+        <button>Submit</button>
+    </p>
+</div>
+    
+    <button class="add-btn" onclick="addForm()">
+    + Add New
+</button>
+
+</div>
+`;}
 }
 
 </script>
+
+
 
     </body>
 </html>
